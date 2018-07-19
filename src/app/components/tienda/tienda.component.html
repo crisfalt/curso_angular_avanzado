@@ -1,0 +1,54 @@
+<a class="btn btn-success boton-activo" [@marcar]="state" (click)="cambiarEstado($event)">
+    <span *ngIf="state == 'inactive'">Boton Inactivo</span>
+    <span *ngIf="state == 'active'">Boton Activo</span>
+</a>
+<hr>
+<h4>Animaciones de CSS3</h4>
+<a class="btn btn-primary boton-transiciones">Transiciones</a>
+<div class="clearfix"></div>
+
+<div class="caja-animada">
+
+</div>
+<hr>
+<h4>utilizar jquery dentro de angular</h4>
+<button id="btnJq">Mostrar Parrafo</button>
+<p id="txtJq" class="alert alert-warning">Prueba</p>
+
+<div id="caja" style="border: 1px solid black; width: 150px; height: 50px">
+   ajsdakshdjhssssssssssssssssssssssssssssssssssssssssssssssssskjakkkkkkkkkkaaaaaaaa
+</div>
+
+<hr>
+
+<editor apiKey="test" [init]="{plugins: 'link'}" [(ngModel)]="editor"></editor>
+
+<hr>
+Padre: Componente Tienda
+<h1>{{ titulo }}</h1>
+<ul>
+    <li>Camisa roja</li>
+    <li>Gorra verde</li>
+</ul>
+<hr>
+Nombre del parque:
+<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()">
+<br>
+Resultado: {{ nombreDelParque }}
+<hr>
+Hijo : Componente Parques
+<ol *ngIf="miParque">
+    <h4>Datos de mi parque desde el hijo</h4>
+    <li>{{ miParque.nombre }}</li>
+    <li>{{ miParque.metros }}</li>
+    <li>{{ miParque.vegetacion }}</li>
+    <li>{{miParque.abierto }}</li>
+</ol>
+<p *ngIf="!miParque">
+    No existe mi parque
+</p>
+
+<br>
+<p *ngIf="nombreDelParque">
+    <app-parques [nombre]="nombreDelParque" (pasameLosDatos)="verDatosParque($event)"></app-parques>
+</p>

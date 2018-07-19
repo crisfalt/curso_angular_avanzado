@@ -1,0 +1,84 @@
+h1
+{
+  color: yellow;
+}
+
+ul {
+  background: red;
+  color: white;
+}
+
+/*estilo del boton boton-transiciones*/
+.boton-transiciones {
+    padding: 10px; /*margen interior*/
+    background: red; /*color del fondo*/
+    color: white; /*color de la letra*/
+    border-radius: 20px; /*para poner el boton redondo*/
+    border: 3px solid green; /*cambiar el color del borde*/
+    /*transition: all 2s; !*aplica para todos los elementos que componen el componente principal en este caso a*!*/
+    transition: border 2s, border-radius 500ms, background 5s; /*aplica solo a algunos componentes del principal*/
+    display: block;
+    width: 200px;
+}
+
+/*estilo cuando pasa el cursor encima del enlace*/
+.boton-transiciones:hover {
+    text-decoration: none; /*que no haga ningun efecto en el enlace*/
+    color: #000;  /*color de la letra*/
+    cursor: pointer; /*cambiar estilo del cursor*/
+    border-radius: 2px;
+    background: #cccccc;
+    border: 3px solid red;
+}
+
+/* Animacion a caja animada*/
+.caja-animada {
+    margin-top: 20px;
+    background: green;
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    /*animation-name: deslizamiento; !*lo primero es darle un nombre a la animacion*!*/
+    /*animation-duration: 10s; !*se le da en tiempo la duracion que va a tener la animacion*!*/
+    /*animation-iteration-count: infinite; !*para que la animacion sea infinita*!*/
+}
+
+/*se le crear keyframe para crear la animacion de rotacion un element*/
+@keyframes deslizamiento {
+  from {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    margin-left: 600px;
+  }
+}
+
+/*se le crear keyframe para crear la animacion a deslizamiento desde hasta*/
+@keyframes deslizamiento1 {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 400px;
+        background: red;
+    }
+}
+
+/*se le crear keyframe para crear la animacion a deslizamiento segun un porcentaje de tiempo */
+@keyframes deslizamiento2 {
+    0% {
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: 400px;
+        background: red;
+    }
+    100% {
+        margin-left: 0px;
+        background: yellow;
+    }
+}
+
+

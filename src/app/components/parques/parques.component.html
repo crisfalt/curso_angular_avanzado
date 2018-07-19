@@ -1,0 +1,15 @@
+<p>{{ nombre }}</p>
+<ol>
+    <li>{{ metros }}</li>
+    <li>{{ vegetacion }}</li>
+    <li>
+        <span *ngIf="abierto ; else cerrado">Abierto</span>
+        <ng-template #cerrado>
+            <span>Cerrado</span>
+        </ng-template>
+        <!--<span *ngIf="!abierto">cerrado</span>-->
+    </li>
+</ol>
+
+<button (click)="emitirEvento($event)">Mostrar en el padre</button>
+

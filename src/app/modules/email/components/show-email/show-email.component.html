@@ -1,0 +1,7 @@
+<p>
+    {{ title }}
+</p>
+<span *ngIf="email">
+    <h3>{{ email }}</h3>
+    <button (click)="vaciar($event)">Vaciar Email del LocalStorage</button>
+</span>

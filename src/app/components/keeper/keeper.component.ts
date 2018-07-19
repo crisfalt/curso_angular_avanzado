@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+    selector: 'app-keeper',
+    templateUrl: './keeper.component.html',
+    styleUrls: ['./keeper.component.css']
+})
+export class KeeperComponent implements OnInit {
+
+    public title = 'Cuidador';
+
+    constructor() { }
+
+    ngOnInit() {
+        console.log('keeper.component cargado');
+    }
+
+}
